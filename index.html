@@ -3,148 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <title>Webdev</title>
 </head>
 
 <body>
-    
-    <header class="main-header">
-        <nav class="main-nav">
-            <h1 class="visually-hidden">Webdev</h1>
-            <div class="logo-container">
-                <img src="/assets/images/logo.svg" width="44" height="45" alt="Webdev-logo" class="logo">
-            
-            </div>
-            <ul>
-                <li class="nav-item"><a href="#">About</a></li>
-                <li class="nav-item"><a href="#">Syllabus</a></li>
-                <li class="nav-item"><a href="#">Projects</a></li>
-                <li class="nav-item"><a href="#">FAQ</a></li>
-            </ul>
-        </nav>
+    <div class="wrapper">
         
-    </header>
-    
-    
-    <main class="main-content">
-        <section class="promo">
+        <header id="main-header" class="main-header" >
+            <nav class="main-nav">
+                <h1 class="visually-hidden">Webdev</h1>
+               
+                <ul>
+                    <li class="nav-item"><a href="#main-header">About</a></li>
+                    <li class="nav-item"><a href="#">Syllabus</a></li>
+                    <li class="nav-item">
+                        <a href="index.html"><img class="logo" src="assets/images/logo.svg" width="44" height="45" alt="Webdev-logo"></a>
+                        </li>
+                    <li class="nav-item"><a href="#">Projects</a></li>
+                    <li class="nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <section id="promo" class="promo">
             <h2 class="visually-hidden">Promo</h2>
-            <div>
+            <div class="about">
                 <p>Your life is webdev</p>
                 <p>Whatever the approach to development may be, 
                     the final program must satisfy some fundamental properties</p>
                 <a href="#" class="button">Get started</a>
             </div>
             <div class="socials">
-                <img src="assets/images/mail_icon.svg" width="20" height="20" alt="mail.ru">
-                <img src="assets/images/facebook-icon.svg" width="20" height="20" alt="facebook">
-                <img src="assets/images/instagram-icon.svg" width="20" height="20" alt="instagram">
-                <img src="assets/images/telegram-icon.svg" width="20" height="20" alt="telegram">
+                <a href=""><img src="assets/images/mail_icon.svg" width="20" height="20" alt="mail.ru"></a>
+                <a href=""><img src="assets/images/facebook-icon.svg" width="20" height="20" alt="facebook"></a>
+                <a href=""><img src="assets/images/instagram-icon.svg" width="20" height="20" alt="instagram"></a>
+                <a href=""><img src="assets/images/telegram-icon.svg" width="20" height="20" alt="telegram"></a>
             </div>
         </section>
-    <section class="smart-design">
-        <h2 class="visually-hidden">Smart-design</h2> 
-    
-        <div class="left-column">
-            <h2>Rappresent your idea with
-                a smart Design</h2>
-            <p>Tasks accompanying and related to programming include: testing, debugging, source code maintenance, 
-                implementation of build systems, and management of derived artifacts,
-                 such as the machine code of computer programs. </p>
-            <a href="" class="button">Get started</a>
-        </div>
-        <div class="right-column">
-            <img src="assets/images/design-example.jpg" width="407" height="582" alt="design-example">
-        </div>
-    
-    </section>
-    <section class="community">
-        <div class="left-column">
-            <img class="icon" src="assets/images/face-icon.png" width="45" height="45" alt="">
-            <h2>Our community</h2>
-            <p>A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem, 
-                but it can also mean a security hacker in common language</p>
-        </div>
-        <div class="slider-container">
-            <div class="pagination">
-                <img class="arrow-left" src="assets/images/arrow-left.svg" width="14" height="14" alt="Left arrow">
-                <p class="currentSlide-number">1</p>
-                <p class="separator">/</p>
-                <p class="maxSlide-number">5</p>
-                <img  class="arrow-right" src="assets/images/arrow-right.svg" width="14" height="14" alt="Right arrow">
-            </div>
-            <div class="slider">
-                <img class="slide-item" src="assets/images/slide1-image.jpg" width="407" height="244" alt="First image in slider">
-                <img class="slide-item" src="assets/images/slide2-image.jpg" width="407" height="244" alt="Second image in slider">
-                <img class="slide-item" src="assets/images/slide3-image.jpg" width="407" height="244" alt="Third image in slider">
-            </div>
-    
-        </div>
-        
-    </section>
-                              
-    <section class="right-code">
-    
-    <div class="left-column">
-        <img src="assets/images/rightCode-image.jpg" width="407" height="582" alt="right-code">
     </div>
-     <div class="right-column">
-         <h2>Implement right Code</h2>
-            <p>These might be considered part of the programming process,
-                     but often the term software development is used for this larger process with the term programming,
-                      implementation</p>
-            <a href="#" class="button">Learn More</a>
-            </div>
-    </section>
     
-    <section class="subscription">
-        <h2 class="visually-hidde">Subscribe now</h2>
-        <div>
-            <p>Sign up for our newsletter</p>
-            <form action="#" method="GET">
-                <input type="email" name="email" id="email">
-                <button class="submit" type="submit">Subscribe</button>
-            </form>
-        </div>
     
-    </section>
-    
-    <section class="download">
-        <div>
-    <h2>Download the app</h2>
-    <p>Machine code was the language of early programs,
-         written in the instruction set of the particular machine, often in binary notation.</p>
-    <div class="download-buttons">
-        <a href="#" class="button">Apple store</a>
-        <a href="#" class="button">Play Market</a>
-    </div> 
-        </div>
+    <main class="main-content">
+    <div class="wrapper">
+        <section id="smart-design" class="smart-design">
+            <h2 class="visually-hidden">Smart-design</h2> 
         
-    </section>
+            <div class="left-column">
+                <h2>Rappresent your idea with<br> a smart Design</h2>
+                <p>Tasks accompanying and related to programming include: testing, debugging, source code maintenance, 
+                    implementation of build systems, and management of derived artifacts,
+                     such as the machine code of computer programs. </p>
+                <a href="#" class="button">Get started</a>
+            </div>
+            <div class="right-column">
+                <img src="assets/images/design-example.jpg" width="407" height="582" alt="design-example">
+            </div>
+        
+        </section>
+    </div>
+    <div class="wrapper">
+        <section id="community" class="community">
+            <div class="left-column">
+                <img class="icon" src="assets/images/face-icon.png" width="45" height="45" alt="">
+                <h2>Our community</h2>
+                <p>A hacker is any skilled computer expert that uses their technical knowledge to overcome a problem, 
+                    but it can also mean a security hacker in common language</p>
+            </div>
+            <div class="slider-container">
+                <div class="pagination">
+                    <img class="arrow-left" src="assets/images/arrow-left.svg" width="14" height="14" alt="Left arrow">
+                    <p class="currentSlide-number">1</p>
+                    <p class="separator">/</p>
+                    <p class="maxSlide-number">5</p>
+                    <img  class="arrow-right" src="assets/images/arrow-right.svg" width="14" height="14" alt="Right arrow">
+                </div>
+                <div class="slider">
+                    <div class="slide-item">
+                        <img class="slide-item" src="assets/images/slide1-image.jpg" width="407" height="244" alt="First image in slider">
+                    </div>
+                    <div class="slide-item">
+                        <img class="slide-item" src="assets/images/slide2-image.jpg" width="407" height="244" alt="Second image in slider">
+                    </div>
+                    <div class="slide-item">
+                        <img class="slide-item" src="assets/images/slide3-image.jpg" width="407" height="244" alt="Third image in slider">
+                    </div>
+                </div>
+        
+            </div>
+            
+        </section>
+    </div>
+                              
+    <div class="wrapper">
+        <section id="right-code" class="right-code">
+        
+        <div class="left-column">
+            <img src="assets/images/rightCode-image.jpg" width="407" height="582" alt="right-code">
+        </div>
+         <div class="right-column">
+             <h2>Implement right Code</h2>
+                <p>These might be considered part of the programming process,
+                         but often the term software development is used for this larger process with the term programming,
+                          implementation</p>
+                <a href="#" class="button">Learn More</a>
+                </div>
+        </section>
+    </div>
+        
+        <div class="wrapper">
+            <section id="subcription" class="subscription">
+                <h2 class="visually-hidden">Subscribe now</h2>
+                <div>
+                    <p>Sign up for our newsletter</p>
+                    <form action="#" method="GET">
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                        <button class="submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            
+            </section>
+       
+        </div>
+    
+    <div class="wrapper">
+        <section id="download" class="download">
+            <div>
+        <h2>Download the app</h2>
+        <p>Machine code was the language of early programs,
+             written in the instruction set of the particular machine, often in binary notation.</p>
+        <div class="download-buttons">
+            <button class="button">Apple store
+                <img src="assets/images/icon-apple.svg" alt="Apple store">
+            </button>
+            <button class="button">
+                Play Market
+            <img src="assets/images/icon-android.svg" alt="Play Market">
+            </button>
+
+            <!--<a href="#" class="button">Apple store</a>
+            <a href="#" class="button">Play Market</a>-->
+        </div> 
+            </div>
+            
+        </section>
+    </div>
     
     
     </main>
     
-    <footer class="main-footer">
-    <nav>
-    <ul>
-        <li><a href="#">Credits</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Our teams</a></li>
-    </ul>
+        <footer id="footer" class="main-footer">
+
+            <div class="wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="#">Credits</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Our teams</a></li>
+                    </ul>
+                    
+                    </nav>
+                    <div>
+                        <img class="logo" src="assets/images/logo.svg" width="44" height="45" alt="Webdev-logo">
+                    </div>
+                    <div class="copyright">
+                        <p>by TonYem for RSS at 2020</p>
+                    
+                    </div>
+
+            </div>
+        
+        
+        </footer>
     
-    </nav>
-    <div>
-        <img class="logo" src="assets/images/logo.svg" width="44" height="45" alt="Webdev-logo">
-    </div>
-    <div class="copyright">
-        <p>by TonYem for RSS at 2020</p>
-    
-    </div>
-    
-    </footer>
     
 </body>
 </html>
