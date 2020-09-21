@@ -27,6 +27,10 @@ body {
     background-size: cover;
 }
 
+.active {
+    border-bottom: 1px solid #ffffff;
+}
+
 .main-content .wrapper {
     background: none;
 }
@@ -410,3 +414,6 @@ a.button:hover {
 }
 
 
+strong {
+    font-weight: bold !important;
+}
