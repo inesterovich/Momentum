@@ -31,10 +31,23 @@ class Calculator {
         this.currentOperand = '';
     }
 
+    sqrt() {
+        let computation;
+        const current = parseFloat(this.currentOperand);
+        computation = Math.sqrt(current);
+        this.currentOperand = Math.round(computation * 10000)/ 10000;
+       
+    }
+
     compute() {
         let computation;
+/*
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
+*/
+        const prev = Number(this.previousOperand);
+        const current = Number(this.currentOperand);
+
         if (isNaN(prev) || isNaN(current)) return;
         switch (this.operation) {
             case '+':
@@ -49,9 +62,14 @@ class Calculator {
             case '÷':
             computation = prev / current;
             break;
+            case '^':
+            computation = Math.pow(prev, current);
+            break;
             default:
             return;
         }
+
+        computation = Math.round(computation * 10000) / 10000;
 
         this.currentOperand = computation;
         this.operation = undefined;
@@ -96,6 +114,8 @@ const operationButtons = calculatorField.querySelectorAll('[data-operation]');
 const equalsButton = calculatorField.querySelector('[data-equals]');
 const deleteButton = calculatorField.querySelector('[data-delete]');
 const allClearButton = calculatorField.querySelector('[data-all-clear]');
+const sqrtButton = calculatorField.querySelector('[data-sqrt]')
+
 const previousOperandTextElement = calculatorField.querySelector('[data-previous-operand]');
 const currentOperandTextElement = calculatorField.querySelector('[data-current-operand]');
 
@@ -129,6 +149,20 @@ operationButtons.forEach(button => {
 
 })
 
+sqrtButton.addEventListener('click', button => {
+
+    if (calculator.currentOperand < 0) {
+        alert('Недопустимая операция');
+        calculator.clear();
+
+    } else {
+        calculator.sqrt();
+        
+    }
+        calculator.updateDisplay();
+    
+})
+
 equalsButton.addEventListener('click', button => {
     calculator.compute();
     calculator.updateDisplay();
@@ -147,3 +181,13 @@ deleteButton.addEventListener('click', button => {
     calculator.updateDisplay();
 
 })
+
+
+// А если всё-таки отдельную функцию и отдельную кнопку повесить? И там пусть всё считается....
+
+/*
+const testEvent = new Event('click');
+calculator.currentOperand = - 25;
+calculator.updateDisplay();
+sqrtButton.dispatchEvent(testEvent);
+*/
