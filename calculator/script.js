@@ -16,6 +16,9 @@ class Calculator {
       this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
 
+    plusMinus() {
+    this.currentOperand  = -this.currentOperand;
+    }
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
         this.currentOperand = this.currentOperand.toString() + number.toString();
@@ -69,7 +72,7 @@ class Calculator {
             return;
         }
 
-        computation = Math.round(computation * 10000) / 10000;
+        computation = +computation.toFixed(4);
 
         this.currentOperand = computation;
         this.operation = undefined;
@@ -115,7 +118,7 @@ const equalsButton = calculatorField.querySelector('[data-equals]');
 const deleteButton = calculatorField.querySelector('[data-delete]');
 const allClearButton = calculatorField.querySelector('[data-all-clear]');
 const sqrtButton = calculatorField.querySelector('[data-sqrt]')
-
+const plusMinus = calculatorField.querySelector('[data-plus-minus]');
 const previousOperandTextElement = calculatorField.querySelector('[data-previous-operand]');
 const currentOperandTextElement = calculatorField.querySelector('[data-current-operand]');
 
@@ -175,6 +178,11 @@ allClearButton.addEventListener('click', button => {
 
 })
 
+plusMinus.addEventListener('click', button => {
+    calculator.plusMinus();
+    calculator.updateDisplay();
+})
+
 
 deleteButton.addEventListener('click', button => {
     calculator.delete();
@@ -183,11 +191,3 @@ deleteButton.addEventListener('click', button => {
 })
 
 
-// А если всё-таки отдельную функцию и отдельную кнопку повесить? И там пусть всё считается....
-
-/*
-const testEvent = new Event('click');
-calculator.currentOperand = - 25;
-calculator.updateDisplay();
-sqrtButton.dispatchEvent(testEvent);
-*/
