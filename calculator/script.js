@@ -66,13 +66,14 @@ class Calculator {
             computation = prev / current;
             break;
             case '^':
+            prev < 0 ? computation = - Math.pow(Math.abs(prev),current):
             computation = Math.pow(prev, current);
             break;
             default:
             return;
         }
 
-        computation = +computation.toFixed(4);
+        computation = +computation.toFixed(7);
 
         this.currentOperand = computation;
         this.operation = undefined;
