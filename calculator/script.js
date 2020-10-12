@@ -1,3 +1,7 @@
+if (localStorage.getItem('instruction') === undefined) {
+    localStorage.setItem('instrcution', false);
+}
+
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
        this.previousOperandTextElement = previousOperandTextElement;
@@ -191,4 +195,24 @@ deleteButton.addEventListener('click', button => {
 
 })
 
+const instructionButton = document.querySelector('.instruction');
+const modalInstruction = document.querySelector('.modal');
+const closeButton = modalInstruction.querySelector('.close__button');
 
+
+
+instructionButton.addEventListener('click', () => {
+    modalInstruction.classList.remove('undisplayed');
+})
+
+closeButton.addEventListener('click', () => {
+    modalInstruction.classList.add('undisplayed');
+})
+
+calculatorField.addEventListener('click', () => {
+ if (!localStorage.getItem('instruction')) {
+     localStorage.setItem('instruction', true);
+     alert('Пожалуйста, прочтите инструкцию!');
+ } 
+
+})
