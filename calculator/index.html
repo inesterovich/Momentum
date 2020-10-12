@@ -1,41 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Calculator</title>
-  <link href="styles.css" rel="stylesheet">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <div data-calculator class="calculator-grid">
-    <div class="output">
-      <div data-previous-operand class="previous-operand"></div>
-      <div data-current-operand class="current-operand"></div>
+  <div class="page__wrapper">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div data-calculator class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button data-all-clear class="all-clear" >AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>^</button>
+      <button data-sqrt>√</button>
+      <button data-operation>*</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>-</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>÷</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>+</button>
+      <button data-plus-minus>+/-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals >=</button>
     </div>
-    <button data-all-clear class="all-clear" >AC</button>
-    <button data-delete>DEL</button>
-    <button data-operation>^</button>
-    <button data-sqrt>√</button>
-    <button data-operation>*</button>
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-operation>-</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-operation>÷</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-    <button data-operation>+</button>
-    <button data-plus-minus>+/-</button>
-    <button data-number>.</button>
-    <button data-number>0</button>
-    <button data-equals >=</button>
+  
+    <section>
+      <button class="instruction">Инструкция по проверке</button>
+    </section>
   </div>
+
+  <section class="modal undisplayed">
+    <div class="modal__wrapper ">
+      <h2>Результат самопроверки, примечание для проверяющих</h2>
+  
+      <ul>
+        <li>Score - 40 / 40: </li>
+        <li>
+          <h3> Базовая функциональность + 10</h3>
+          <p> [x] Калькулятор выполняет математические операции: сложение, вычитание, умножение, деление.
+            Обязательно наличие десятичной точки, действия с многозначными числами, возможность выполнить несколько действий подряд,
+             очистить результат.</p>
+        </li>
+  
+        <li>
+          <h3> Дополнительные математические операции + 10</h3>
+          <p> [x] Возведение в степень - работает стандартным образом. 
+            -2 ^ 0.5 степень - не ошибка, вначале выполяется возведение, потом умножение на -1.</p>
+          <p> [x] Извлечение квадратного корня - вначале необходимо выбрать число, затем нажать кнопку "корень". 
+            Результат высчитывается сразу после клика на кнопку, знак корня не отображается.</p>
+            <p>[x] Невозможно извлечь корень из отрицтательного числа.</p>
+        </li>
+  
+        <li>
+          <h3>Действия с отрицательными числами + 10</h3>
+          <p>[x] Для работы с отрицательными числами применяется кнопка +/-. Необходимо вначале выбрать число, затем нажать на кнопку. 
+            Работает как с первым, так и со вторым операндом.</p>
+        </li>
+  
+        <li>
+          <h3>Действия с дробями + 10</h3>
+          <p> [x] Калькулятор считаем дроби. Поддреживается 7 символов после точки. 
+            Справляется с вычислением типа 125 - 123.789.
+          </p>
+        </li>
+      </ul>
+
+      <button class="close__button" type="button">Закрыть</button>
+    </div>
+
+  </section>
 
 
 </body>
