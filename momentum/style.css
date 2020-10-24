@@ -167,7 +167,7 @@ figcaption {
 
 .blockquoteButton:hover {
   background-color: #f1cd83;
-   transform: scale(1.2);
+ 
 }
 
 .bgChanger {
@@ -187,11 +187,10 @@ display: block;
   cursor: pointer;
 }
 
-.bgButton:hover {
+.bgButton:not(:disabled):hover {
    background-color: #f1cd83;
-   transform: scale(1.2);
+   
 }
-
 
 .weather__forecast {
 

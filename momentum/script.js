@@ -122,7 +122,8 @@ function setBgImage(array) {
         body.style.backgroundImage = `url('${src}')`
     }
     index++;
-
+    bgButton.disabled = true;
+    setTimeout(() => bgButton.disabled = false, 1000)
 
 }
 
@@ -193,7 +194,7 @@ async function getQuote() {
     const result = await fetch(url);
     const data = await result.json();
     blockquote.textContent = data.quoteText;
-    figCaption.textContent = data.quoteAuthor;
+    data.quoteAuthor === '' ? figCaption.textContent = 'Неизвестный автор': figCaption.textContent = data.quoteAuthor;
 }
 
 
