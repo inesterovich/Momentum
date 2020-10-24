@@ -36,7 +36,7 @@ button {
   align-content: stretch;
   position: relative;
   width: 85vw;
-  height: 80vh;
+
   background-color: rgba(255, 255, 255, 0.7);
   
   padding: 2vw;
@@ -65,8 +65,7 @@ button {
 }
 
 .time {
-  font-size: 12.8rem;
-  
+  font-size: 12.8rem; 
 }
 
 .greet {
@@ -132,6 +131,7 @@ button {
 .dayQuote {
   border: 1px solid white;
   padding: 1rem;
+  text-align: center;
 }
 
 
@@ -139,9 +139,9 @@ button {
 .quote {
   display: flex;
   flex-direction: column;
-  max-width: 25vw;
   font-size: 2rem;
   margin-top: 1rem;
+  margin: 0 auto;
   
 }
 
@@ -172,8 +172,8 @@ figcaption {
 
 .bgChanger {
   position: fixed;
-  top: 3.2rem;
-  left: 4.8rem;
+  top: 2vh;
+  left: 2vw;
 }
 
 .bgButton {
@@ -203,18 +203,63 @@ display: block;
 }
 
 .weather__forecast .city {
-  max-width: 10rem;
+  max-width: 15rem;
   flex-shrink: 0;
   margin: 0 auto;
   margin-top: 1rem;
   margin-bottom: 1rem;
- 
+  transition: 1s;
+ padding: 1rem;
+ border-radius: 20%;
 }
 
+.city:hover {
+  background-color: #f1cd83;
+  transform: scale(1.2);
+}
 
+.city:focus {
+  background-color: #f1cd83;
+  transform: scale(1.2);
+  text-decoration: underline;
+}
 
-@media (max-width: 700px) {
+@media (max-width: 1500px) {
   .time {
-    font-size: 6rem;
+    font-size: 10rem;
   }
 }
+
+
+@media (max-width: 1220px) {
+  .time {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+body {
+  height: auto;
+}
+
+ .page__wrapper {
+   grid-template-columns: auto;
+   text-align: center;
+ }
+
+ 
+
+}
+
+
+@media (max-width: 500px) {
+  html {
+    font-size: 7px;
+  }
+
+  .page__wrapper {
+    width: 95vw;
+  }
+}
+
+
