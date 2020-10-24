@@ -14,7 +14,9 @@ const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescription = document.querySelector('.weather-description');
 const city = document.querySelector('.city');
-const bgButton = document.querySelector('.bgButton')
+const bgButton = document.querySelector('.bgButton');
+const humidity = document.querySelector('.humidity');
+const windSpeed = document.querySelector('.wind__speed');
 
 
 let objDefalut = {
@@ -24,7 +26,7 @@ let objDefalut = {
 };
 
 let index = new Date().getHours();
-
+// Вернуть прошлую логику в таймер фона и добавить еще один интервал запуска той же функции - через минуту
 
 
 function showTime() {
@@ -218,12 +220,15 @@ async function getWeather() {
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${Math.ceil(data.main.temp)}°C`;
-        weatherDescription.textContent = `${data.weather[0].description}, относительная влажность воздуха - ${data.main.humidity} %, скорость ветра - ${data.wind.speed} м/с`;
-        // Мне не нравится всё сюда пихать
+        weatherDescription.textContent = `${data.weather[0].description}`;
+       humidity.textContent = `относительная влажность воздуха - ${data.main.humidity} %`;
+       windSpeed.textContent = `скорость ветра - ${data.wind.speed} м/с`;
     } else if (result.status === 404) {
         weatherIcon.className = '';
         weatherIcon.textContent = '';
         temperature.textContent = '';
+        humidity.textContent = '';
+        windSpeed.textContent = '';
         weatherDescription.textContent = 'Осторожно, ошибка! Неправильно набран город';
         localStorage.removeItem(city.className);
     }

@@ -4,53 +4,214 @@
   padding: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   height: 100vh;
   background-size: cover;
   color: #000000;
   transition: 0.5s;
-}
-
-.time {
-  font-size: 8rem;
-}
-
-.h1 {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  font-weight: bold;
   display: flex;
-}
-
-.name {
-  min-width: 2rem;
-  flex-shrink: 0;
-  padding-left: 0.5rem;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.page__wrapper {
+  display: grid;
+  grid-template-columns: 45% auto;
+  align-content: stretch;
+  position: relative;
+  width: 85vw;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  
+  padding: 2vw;
+  column-gap: 3vw;
+  row-gap: 3vh;
+  font-size: 1.6rem;
+}
+
+.page__wrapper div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.calendar {
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+.day {
+  font-weight: bold;
+  font-size: 2.4rem;
+  
+}
+
+.time {
+  font-size: 12.8rem;
+  
+}
+
+.greet {
+  border: 1px solid white;
+  padding: 1rem;
+}
+.greeting {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.name {
+  min-width: 3.2rem;
+  flex-shrink: 0;
+  
+  cursor: pointer;
+  transition: 1s;
+  padding: 0.8rem;
+  border-radius: 20%;
+}
+
+.name:hover {
+  background-color: #f1cd83;
+}
+
+.name:focus {
+  background-color: #f1cd83;
+  text-decoration: underline;
+}
+
+.page__wrapper .h1 {
+  margin-bottom: 4.8rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.dayGoal {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.focus {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  transition: 1s;
+  padding: 1.5rem;
+  border-radius: 20%;
+}
+
+.focus:hover {
+  background-color: #f1cd83;
+}
+
+.focus:focus {
+  background-color: #f1cd83;
+  text-decoration: underline;
+}
+
+
+.dayQuote {
+  border: 1px solid white;
+  padding: 1rem;
+}
+
+
+
 .quote {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   max-width: 25vw;
+  font-size: 2rem;
+  margin-top: 1rem;
+  
+}
+
+figcaption {
+  margin-top: 1rem;
+  text-align: right;
+  font-style: italic;
 }
 
 .blockquoteButton {
-  margin-top: 1rem;
+  margin-top: 1.6rem;
   order: 2;
+  width: 20rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+ padding: 0.5rem;
+  z-index: 10;
+  align-self: center;
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 9%;
 }
+
+.blockquoteButton:hover {
+  background-color: #f1cd83;
+   transform: scale(1.2);
+}
+
+.bgChanger {
+  position: fixed;
+  top: 3.2rem;
+  left: 4.8rem;
+}
+
+.bgButton {
+display: block;
+ background-color: rgba(255, 255, 255, 0.7);
+ padding: 0.5rem;
+  z-index: 10;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 9%;
+  cursor: pointer;
+}
+
+.bgButton:hover {
+   background-color: #f1cd83;
+   transform: scale(1.2);
+}
+
+
+.weather__forecast {
+
+  font-size: 2rem;
+  border: 0.1rem solid white;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.weather__forecast .city {
+  max-width: 10rem;
+  flex-shrink: 0;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ 
+}
+
+
 
 @media (max-width: 700px) {
   .time {

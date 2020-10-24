@@ -9,38 +9,58 @@
   <title>momentum</title>
 </head>
 <body>
-
-  <div class="bcChanger">
-    <button class="bgButton">Сменить фон</button>
+<div class="page__wrapper">
+  <div class="bgChanger">
+    <a class="bgButton">Сменить фон</a>
   </div>
-  <div data-date class="day">
-    
-  </div>
-  <time data-time="" class="time"></time>
-
-  <div class="h1">
-    <span data-greeting class="greeting"></span>
-    <span data-name class="name" contenteditable="true"></span>
-  </div>
-  <h2>Чем займемся сегодня?</h2>
-  <h2 class="focus" data-focus contenteditable="true"> Hi-hi-hi</h2>
-
- 
-  <figure  class="quote">
-    <button data-blockquoteButton class='blockquoteButton'>Изменить цитату</button>
-    <blockquote data-blockquote class="blockquote"></blockquote>
-    
-    <figcaption data-figCaption> 
+  
+  <section class="calendar">
+    <div data-date class="day">
       
-    </figcaption>
-  </figure>
-
-  <section class="weather__forecast">
-    <div class="city" contenteditable="true">Москва</div>
-    <i class="weather-icon owf"></i>
-      <div class="temperature"></div>
-      <div class="weather-description"></div>
+    </div>
+    <time data-time="" class="time"></time>
   </section>
+
+  <section class="greet">
+    <div class="h1">
+      <p data-greeting class="greeting"></p>
+      <p data-name class="name" contenteditable="true"></p>
+    </div>
+  
+  <div class="dayGoal">
+    
+      <p class="h2">Чем займемся сегодня?</p>
+      <p class="focus" data-focus contenteditable="true"></p>
+  </div>
+    
+    
+      
+  </section>
+  
+    <section class="dayQuote">
+      <h2>Цитата дня</h2>
+      <figure  class="quote">
+        <button data-blockquoteButton class='blockquoteButton'>Изменить цитату</button>
+        <blockquote data-blockquote class="blockquote"></blockquote>
+        
+        <figcaption data-figCaption> 
+          
+        </figcaption>
+      </figure>
+    </section>
+  
+    <section class="weather__forecast">
+      <h2>Прогноз погоды</h2>
+      <div class="city" contenteditable="true">Москва</div>
+      <div class="weather-icon owf"></div>
+        <div class="temperature"></div>
+        <div class="weather-description"></div>
+        <div class="humidity"></div>
+        <div class="wind__speed"></div>
+    </section>
+  
+    
+</div>
   <script src="script.js"></script>
 </body>
 </html>
