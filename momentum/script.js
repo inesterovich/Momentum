@@ -292,10 +292,23 @@ getElement(city, objDefalut)
 
 name.addEventListener('keypress', setElement);
 name.addEventListener('blur', setElement);
+name.addEventListener('focus', ()=> {
+name.textContent = '';
+
+})
+
 focus.addEventListener('keypress', setElement);
 focus.addEventListener('blur', setElement);
+focus.addEventListener('focus', ()=> {
+    focus.textContent = '';
+    })
+
 city.addEventListener('keypress', setCity); 
-city.addEventListener('blur', setCity); 
+city.addEventListener('blur', setCity);
+city.addEventListener('focus', ()=> {
+    city.textContent = '';
+    
+    })
 
 document.addEventListener('DOMContentLoaded', getQuote);
 blockquoteButton.addEventListener('click', getQuote)
