@@ -80,12 +80,14 @@ function greet() {
 
 }
 
-function generateSet(size, minNumber, maxNumber) {
-    function randomInteger(min, max) {
-        let rand = min + Math.random() * (max + 1 - min);
-        return Math.floor(rand);
-      }
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
 
+
+function generateSet(size, minNumber, maxNumber) {
+   
     let set = new Set();
   
     while (set.size < size) {
@@ -192,9 +194,19 @@ async function getQuote() {
 
     const url = `https://cors-anywhere.herokuapp.com/https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=ru`;
     const result = await fetch(url);
-    const data = await result.json();
-    blockquote.textContent = data.quoteText;
-    data.quoteAuthor === '' ? figCaption.textContent = 'Неизвестный автор': figCaption.textContent = data.quoteAuthor;
+    
+    if (result.ok) {
+        const data = await result.json();
+        blockquote.textContent = data.quoteText;
+        data.quoteAuthor === '' ? figCaption.textContent = 'Неизвестный автор':
+         figCaption.textContent = data.quoteAuthor;
+    } else {
+        const index = randomInteger(0, quotes.length -1);
+        const data = quotes[index];
+        blockquote.textContent = data.text;
+        figCaption.textContent = data.author;
+    }
+    
 }
 
 
@@ -322,18 +334,7 @@ bgButton.addEventListener('click', () => {
 })
 
 
-/* Сделать функцию-планировщик - пусть каждую секунду проверяет не изменился ли контент на странице (соответствует ли он условию) 
 
 
-*/
-/*
-//1. Дополнить прогноз погоды.
-//2. Сделать проверку на неправильный ввод города
-3. Сделать функцию смены фона. Теперь сделаем кнопочку фона и запустим таймер. 
-4. Стилизовать приложение
-5. Заадаптивить дизайн
-6. Прикрутить анимацию, зависящую от погоды 
 
-
-*/
-
+console.log(quotes);
